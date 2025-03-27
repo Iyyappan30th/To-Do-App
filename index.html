@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income-Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Income-Expense Tracker</h2>
+
+        <div class="balance">
+            <h3>Balance: $<span id="balance">0</span></h3>
+        </div>
+
+        <div class="summary">
+            <div class="income">
+                <h4>Income</h4>
+                <p>$<span id="income">0</span></p>
+            </div>
+            <div class="expense">
+                <h4>Expense</h4>
+                <p>$<span id="expense">0</span></p>
+            </div>
+        </div>
+
+        <form id="transaction-form">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <h3>Transaction History</h3>
+        <ul id="transaction-list"></ul>
+
+        <div class="filters">
+            <select id="filter-type">
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        
+            <input type="number" id="min-amount" placeholder="Min Amount">
+            <input type="number" id="max-amount" placeholder="Max Amount">
+            
+            <input type="text" id="search" placeholder="Search by description">
+        
+            <button id="apply-filters">Apply Filters</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
